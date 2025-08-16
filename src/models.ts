@@ -1,5 +1,5 @@
-import { CliError } from "./error"
-import { getOllamaModels } from "./ollama"
+import { CliError } from "./error";
+import { getOllamaModels } from "./ollama";
 
 export type ModelInfo = { id: string; realId?: string }
 
@@ -58,12 +58,44 @@ export const MODEL_MAP: {
   ],
   gemini: [
     {
-      id: "gemini-2.0-flash",
-      realId: "gemini-2.0-flash-exp",
+      id: "gemini-2.5-pro",
+      realId: "gemini-2.5-pro",
     },
     {
-      id: "gemini-2.0-flash-thinking",
-      realId: "gemini-2.0-flash-thinking-exp",
+      id: "gemini-2.5-flash",
+      realId: "gemini-2.5-flash",
+    },
+    {
+      id: "gemini-2.5-flash-lite-preview-06-17",
+      realId: "gemini-2.5-flash-lite-preview-06-17",
+    },
+    {
+      id: "gemini-2.5-flash-preview-native-audio-dialog",
+      realId: "gemini-2.5-flash-preview-native-audio-dialog",
+    },
+    {
+      id: "gemini-2.5-flash-exp-native-audio-thinking-dialog",
+      realId: "gemini-2.5-flash-exp-native-audio-thinking-dialog",
+    },
+    {
+      id: "gemini-2.5-flash-preview-tts",
+      realId: "gemini-2.5-flash-preview-tts",
+    },
+    {
+      id: "gemini-2.5-pro-preview-tts",
+      realId: "gemini-2.5-pro-preview-tts",
+    },
+    {
+      id: "gemini-2.0-flash",
+      realId: "gemini-2.0-flash",
+    },
+    {
+      id: "gemini-2.0-flash-preview-image-generation",
+      realId: "gemini-2.0-flash-preview-image-generation",
+    },
+    {
+      id: "gemini-2.0-flash-lite",
+      realId: "gemini-2.0-flash-lite",
     },
     {
       id: "gemini-1.5-pro",
