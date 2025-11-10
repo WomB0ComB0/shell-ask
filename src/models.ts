@@ -66,36 +66,16 @@ export const MODEL_MAP: {
   ],
   gemini: [
     {
-      id: "gemini-2.5-pro-exp",
-      realId: "gemini-2.5-pro-exp-0114",
+      id: "gemini-pro-latest",
     },
     {
-      id: "gemini-2.5-pro",
-      realId: "gemini-2.5-pro-latest",
+      id: "gemini-flash-latest",
     },
     {
-      id: "gemini-2.5-flash",
-      realId: "gemini-2.5-flash-latest",
+      id: "gemini-exp-1206",
     },
     {
-      id: "gemini-2.0-flash",
-      realId: "gemini-2.0-flash-exp",
-    },
-    {
-      id: "gemini-2.0-flash-thinking",
-      realId: "gemini-2.0-flash-thinking-exp-01-21",
-    },
-    {
-      id: "gemini-1.5-pro",
-      realId: "gemini-1.5-pro-latest",
-    },
-    {
-      id: "gemini-1.5-flash",
-      realId: "gemini-1.5-flash-latest",
-    },
-    {
-      id: "gemini-1.5-flash-8b",
-      realId: "gemini-1.5-flash-8b-latest",
+      id: "gemini-2.0-flash-thinking-exp-1219",
     },
   ],
   groq: [
@@ -191,7 +171,7 @@ export function getCheapModelId(modelId: string) {
 
   if (modelId.startsWith("claude-")) return "claude-3-haiku-20240307"
 
-  if (modelId.startsWith("gemini-")) return "gemini-1.5-flash-latest"
+  if (modelId.startsWith("gemini-")) return "gemini-flash-latest"
 
   if (modelId.startsWith("groq-")) return "llama-3.1-8b-instant"
 
