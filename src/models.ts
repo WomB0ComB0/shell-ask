@@ -49,53 +49,41 @@ export const MODEL_MAP: {
     },
     {
       id: "claude-3.5-haiku",
-      realId: "claude-3-5-haiku-latest",
+      realId: "claude-3-5-haiku-20241022",
     },
     {
       id: "claude-3.5-sonnet",
-      realId: "claude-3-5-sonnet-latest",
+      realId: "claude-3-5-sonnet-20241022",
+    },
+    {
+      id: "claude-3.7-sonnet",
+      realId: "claude-3-7-sonnet-20250219",
+    },
+    {
+      id: "claude-3.7-haiku",
+      realId: "claude-3-7-haiku-20250219",
     },
   ],
   gemini: [
     {
+      id: "gemini-2.5-pro-exp",
+      realId: "gemini-2.5-pro-exp-0114",
+    },
+    {
       id: "gemini-2.5-pro",
-      realId: "gemini-2.5-pro",
+      realId: "gemini-2.5-pro-latest",
     },
     {
       id: "gemini-2.5-flash",
-      realId: "gemini-2.5-flash",
-    },
-    {
-      id: "gemini-2.5-flash-lite-preview-06-17",
-      realId: "gemini-2.5-flash-lite-preview-06-17",
-    },
-    {
-      id: "gemini-2.5-flash-preview-native-audio-dialog",
-      realId: "gemini-2.5-flash-preview-native-audio-dialog",
-    },
-    {
-      id: "gemini-2.5-flash-exp-native-audio-thinking-dialog",
-      realId: "gemini-2.5-flash-exp-native-audio-thinking-dialog",
-    },
-    {
-      id: "gemini-2.5-flash-preview-tts",
-      realId: "gemini-2.5-flash-preview-tts",
-    },
-    {
-      id: "gemini-2.5-pro-preview-tts",
-      realId: "gemini-2.5-pro-preview-tts",
+      realId: "gemini-2.5-flash-latest",
     },
     {
       id: "gemini-2.0-flash",
-      realId: "gemini-2.0-flash",
+      realId: "gemini-2.0-flash-exp",
     },
     {
-      id: "gemini-2.0-flash-preview-image-generation",
-      realId: "gemini-2.0-flash-preview-image-generation",
-    },
-    {
-      id: "gemini-2.0-flash-lite",
-      realId: "gemini-2.0-flash-lite",
+      id: "gemini-2.0-flash-thinking",
+      realId: "gemini-2.0-flash-thinking-exp-01-21",
     },
     {
       id: "gemini-1.5-pro",
@@ -106,41 +94,42 @@ export const MODEL_MAP: {
       realId: "gemini-1.5-flash-latest",
     },
     {
-      id: "gemini-pro",
+      id: "gemini-1.5-flash-8b",
+      realId: "gemini-1.5-flash-8b-latest",
     },
   ],
   groq: [
     {
       id: "groq-llama-3.3-70b",
-      realId: "groq-llama-3.3-70b-versatile",
+      realId: "llama-3.3-70b-versatile",
+    },
+    {
+      id: "groq-llama-3.1-70b",
+      realId: "llama-3.1-70b-versatile",
     },
     {
       id: "groq-llama-3.1-8b",
-      realId: "groq-llama-3.1-8b-instant",
-    },
-    {
-      id: "groq-llama3",
-      realId: "groq-llama3-70b-8192",
-    },
-    {
-      id: "groq-llama3-8b",
-      realId: "groq-llama3-8b-8192",
+      realId: "llama-3.1-8b-instant",
     },
     {
       id: "groq-llama3-70b",
-      realId: "groq-llama3-70b-8192",
+      realId: "llama3-70b-8192",
+    },
+    {
+      id: "groq-llama3-8b",
+      realId: "llama3-8b-8192",
     },
     {
       id: "groq-mixtral-8x7b",
-      realId: "groq-mixtral-8x7b-32768",
+      realId: "mixtral-8x7b-32768",
     },
     {
-      id: "groq-gemma",
-      realId: "groq-gemma-7b-it",
+      id: "groq-gemma2-9b",
+      realId: "gemma2-9b-it",
     },
     {
       id: "groq-gemma-7b",
-      realId: "groq-gemma-7b-it",
+      realId: "gemma-7b-it",
     },
   ],
   copilot: [
@@ -151,6 +140,10 @@ export const MODEL_MAP: {
     {
       id: "copilot-gpt-4o",
       realId: "gpt-4o",
+    },
+    {
+      id: "copilot-o1",
+      realId: "o1",
     },
     {
       id: "copilot-o1-mini",
@@ -167,6 +160,10 @@ export const MODEL_MAP: {
     {
       id: "copilot-claude-3.5-sonnet",
       realId: "claude-3.5-sonnet",
+    },
+    {
+      id: "copilot-claude-3.7-sonnet",
+      realId: "claude-3.7-sonnet",
     },
   ],
 }
@@ -194,9 +191,9 @@ export function getCheapModelId(modelId: string) {
 
   if (modelId.startsWith("claude-")) return "claude-3-haiku-20240307"
 
-  if (modelId.startsWith("gemini-")) return "gemini-pro"
+  if (modelId.startsWith("gemini-")) return "gemini-1.5-flash-latest"
 
-  if (modelId.startsWith("groq-")) return "groq-llama3-8b-8192"
+  if (modelId.startsWith("groq-")) return "llama-3.1-8b-instant"
 
   if (modelId.startsWith("copilot-")) return "copilot-gpt-4o"
 
