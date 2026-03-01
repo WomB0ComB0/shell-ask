@@ -8,16 +8,19 @@ export const MODEL_MAP: {
 } = {
   gpt: [
     {
-      id: "gpt-3.5-turbo",
+      id: "gpt-4o",
+    },
+    {
+      id: "gpt-4o-mini",
+    },
+    {
+      id: "gpt-4.5-preview",
     },
     {
       id: "gpt-4-turbo",
     },
     {
-      id: "gpt-4o",
-    },
-    {
-      id: "gpt-4o-mini",
+      id: "gpt-3.5-turbo",
     },
   ],
   openai: [
@@ -28,33 +31,10 @@ export const MODEL_MAP: {
       id: "openai-o1-mini",
     },
     {
-      id: "openai-o1-preview",
-    },
-    {
       id: "openai-o3-mini",
     },
   ],
   claude: [
-    {
-      id: "claude-3-haiku",
-      realId: "claude-3-haiku-20240307",
-    },
-    {
-      id: "claude-3-sonnet",
-      realId: "claude-3-sonnet-20240229",
-    },
-    {
-      id: "claude-3-opus",
-      realId: "claude-3-opus-20240229",
-    },
-    {
-      id: "claude-3.5-haiku",
-      realId: "claude-3-5-haiku-20241022",
-    },
-    {
-      id: "claude-3.5-sonnet",
-      realId: "claude-3-5-sonnet-20241022",
-    },
     {
       id: "claude-3.7-sonnet",
       realId: "claude-3-7-sonnet-20250219",
@@ -63,16 +43,42 @@ export const MODEL_MAP: {
       id: "claude-3.7-haiku",
       realId: "claude-3-7-haiku-20250219",
     },
+    {
+      id: "claude-3.5-sonnet",
+      realId: "claude-3-5-sonnet-20241022",
+    },
+    {
+      id: "claude-3.5-haiku",
+      realId: "claude-3-5-haiku-20241022",
+    },
+    {
+      id: "claude-3-opus",
+      realId: "claude-3-opus-20240229",
+    },
+    {
+      id: "claude-3-sonnet",
+      realId: "claude-3-sonnet-20240229",
+    },
+    {
+      id: "claude-3-haiku",
+      realId: "claude-3-haiku-20240307",
+    },
   ],
   gemini: [
     {
-      id: "gemini-pro-latest",
+      id: "gemini-2.0-flash",
     },
     {
-      id: "gemini-flash-latest",
+      id: "gemini-2.0-flash-lite-preview",
     },
     {
-      id: "gemini-exp-1206",
+      id: "gemini-2.0-pro-exp-02-05",
+    },
+    {
+      id: "gemini-1.5-pro",
+    },
+    {
+      id: "gemini-1.5-flash",
     },
     {
       id: "gemini-2.0-flash-thinking-exp-1219",
@@ -84,6 +90,10 @@ export const MODEL_MAP: {
       realId: "llama-3.3-70b-versatile",
     },
     {
+      id: "groq-deepseek-r1-70b",
+      realId: "deepseek-r1-distill-llama-70b",
+    },
+    {
       id: "groq-llama-3.1-70b",
       realId: "llama-3.1-70b-versatile",
     },
@@ -92,31 +102,11 @@ export const MODEL_MAP: {
       realId: "llama-3.1-8b-instant",
     },
     {
-      id: "groq-llama3-70b",
-      realId: "llama3-70b-8192",
-    },
-    {
-      id: "groq-llama3-8b",
-      realId: "llama3-8b-8192",
-    },
-    {
       id: "groq-mixtral-8x7b",
       realId: "mixtral-8x7b-32768",
     },
-    {
-      id: "groq-gemma2-9b",
-      realId: "gemma2-9b-it",
-    },
-    {
-      id: "groq-gemma-7b",
-      realId: "gemma-7b-it",
-    },
   ],
   copilot: [
-    {
-      id: "copilot-gpt-4",
-      realId: "gpt-4",
-    },
     {
       id: "copilot-gpt-4o",
       realId: "gpt-4o",
@@ -130,20 +120,16 @@ export const MODEL_MAP: {
       realId: "o1-mini",
     },
     {
-      id: "copilot-o1-preview",
-      realId: "o1-preview",
-    },
-    {
       id: "copilot-o3-mini",
       realId: "o3-mini",
     },
     {
-      id: "copilot-claude-3.5-sonnet",
-      realId: "claude-3.5-sonnet",
-    },
-    {
       id: "copilot-claude-3.7-sonnet",
       realId: "claude-3.7-sonnet",
+    },
+    {
+      id: "copilot-claude-3.5-sonnet",
+      realId: "claude-3.5-sonnet",
     },
   ],
 }
@@ -171,7 +157,7 @@ export function getCheapModelId(modelId: string) {
 
   if (modelId.startsWith("claude-")) return "claude-3-haiku-20240307"
 
-  if (modelId.startsWith("gemini-")) return "gemini-flash-latest"
+  if (modelId.startsWith("gemini-")) return "gemini-1.5-flash"
 
   if (modelId.startsWith("groq-")) return "llama-3.1-8b-instant"
 
